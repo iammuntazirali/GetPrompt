@@ -1,0 +1,21 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = "file:./dev.db"
+}
+
+model Prompt {
+  id          String   @id @default(cuid())
+  title       String
+  description String
+  content     String
+  category    String   @default("text")
+  tags        String   // SQLite uses JSON string for arrays
+  votes       Int      @default(0)
+  author      String   @default("Anonymous")
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}

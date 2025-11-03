@@ -1,0 +1,36 @@
+{
+  "name": "prompt-hub",
+  "version": "1.0.0",
+  "private": true,
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"No root tests configured\" && exit 0",
+    "lint": "echo \"Run linters in apps/* individually\" && exit 0",
+    "build": "echo \"No root build step: build apps/web individually\" && exit 0",
+    "prepare": "npx husky install",
+    "start:server": "cd apps/server && npm run dev",
+    "start:web": "cd apps/web && npm run dev"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "turbo": "^2.6.0",
+    "prettier": "^2.8.0",
+    "eslint": "^8.0.0",
+    "husky": "^8.0.0",
+    "lint-staged": "^13.0.0"
+  },
+  "lint-staged": {
+    "*.{js,jsx}": [
+      "eslint --fix",
+      "prettier --write"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  }
+}

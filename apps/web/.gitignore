@@ -1,0 +1,15 @@
+node_modules/
+dist/
+.env
+.env.*
+.vscode/
+.idea/
+.DS_Store
+coverage/
+.npm/
+*.local
+.cache/
+*.log
+.pnp.*
+.vite/
+**/dist/
