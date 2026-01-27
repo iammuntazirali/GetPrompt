@@ -34,8 +34,8 @@ Thank you for your interest in contributing to GetPrompt! We welcome contributio
    ```
 
 5. **Access the application**
-   - Frontend: http://localhost:8080
-   - Backend: http://localhost:4000
+   - Frontend: <http://localhost:8080>
+   - Backend: <http://localhost:4000>
 
 ## 📝 Development Workflow
 
@@ -66,7 +66,7 @@ git commit -m "fix: resolve voting state update issue"
 
 ## 🏗️ Project Structure
 
-```
+```text
 prompt-hub/
 ├── apps/
 │   ├── server/          # Backend (Express + Prisma)
@@ -124,8 +124,10 @@ Before submitting a PR, ensure:
 Run tests before submitting:
 
 ```bash
-cd apps/server
-npm run test
+cd apps/web
+npm run test        # Run tests in watch mode (interactive development)
+npm run test:run    # Run tests once and exit (CI/pre-commit)
+npm run test:ui     # Open Vitest UI for visual test debugging
 ```
 
 ## 📄 License

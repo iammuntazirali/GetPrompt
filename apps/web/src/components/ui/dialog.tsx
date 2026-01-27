@@ -90,8 +90,10 @@ interface DialogContentProps
    */
   closeButtonLabel?: string;
   /**
-   * Callback when clicking outside the dialog (on overlay).
-   * Useful for preventing close on important actions.
+   * Callback when clicking on the overlay.
+   * Note: This does NOT prevent the dialog from closing.
+   * To prevent close on outside click, use onPointerDownOutside
+   * with event.preventDefault() instead.
    */
   onOverlayClick?: (event: React.MouseEvent) => void;
 }
